@@ -10,7 +10,6 @@ class Get extends Component {
     this.state = {
       getUrl: "https://reqres.in/api/users/",
       userid: 10,
-      btnText: "Reset",
       id: 0,
       email: "",
       first_name: "",
@@ -19,26 +18,6 @@ class Get extends Component {
     };
 
     this.passNewUserId = this.passNewUserId.bind(this);
-  }
-
-  paper = {
-    margin: "40px",
-    border: "5px solid pink",
-    color: "cyan"
-  };
-
-  clickHandler() {
-    if (this.state.btnText == "Reset") {
-      this.setState({
-        id: 0,
-        email: "",
-        first_name: "",
-        last_name: "",
-        avatar: ""
-      });
-    } else {
-      this.componentDidUpdate();
-    }
   }
 
   componentDidUpdate() {
@@ -86,7 +65,7 @@ class Get extends Component {
       <div>
         <Grid container>
           <Grid item xs={6} spacing={2}>
-            <Paper className={this.paper}>
+            <Paper>
               <Typography variant="title">
                 Website URL is-----><Box>{this.state.getUrl}</Box>
               </Typography>
