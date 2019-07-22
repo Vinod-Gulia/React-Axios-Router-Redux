@@ -6,10 +6,10 @@ import Get from "./Components/Get";
 
 function App() {
   return (
-    <div className="App">
-      <FirstComp />
-      <QATeam />
-      <Get />
+    <div>
+      {/* <FirstComp />
+      <QATeam /> */}
+      <Get className="App" />
     </div>
   );
 }
